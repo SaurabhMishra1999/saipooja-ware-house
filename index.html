@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saipooja Warehouse & Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
                 <li><a href="#booking">Warehouse</a></li>
                 <li><a href="#logistics-booking">Logistics</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="history.html">History</a></li>
                 <li><a href="#" id="login-modal-btn" class="login-btn">Client Login</a></li>
             </ul>
         </nav>
@@ -22,8 +24,78 @@
 
     <main>
         <section class="hero">
-            <h1>Advanced Warehouse & Logistics Management</h1>
-            <p>Your trusted partner in storage and transportation across India.</p>
+            <div class="hero-video">
+                <div id="player"></div>
+            </div>
+            <div class="hero-text">
+                <h1></h1>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2>Features And Facility Advantage</h2>
+            <div class="features-container">
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Secure Storage</h3>
+                    <p>24/7 security and surveillance to ensure the safety of your goods.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Climate Control</h3>
+                    <p>Temperature and humidity controlled environments for sensitive products.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Stock Tracking</h3>
+                    <p>Advanced inventory tracking and management systems.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📦</div>
+                    <h3>Loading/Unloading</h3>
+                    <p>Modern equipment for efficient loading and unloading.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📍</div>
+                    <h3>Strategic Location</h3>
+                    <p>Warehouses located near major transport hubs.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Flexible Transport</h3>
+                    <p>A wide range of transport vehicles to suit your needs.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🧾</div>
+                    <h3>Billing and Invoicing</h3>
+                    <p>Comprehensive billing and invoicing system.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📲</div>
+                    <h3>Digital Challan & POD</h3>
+                    <p>Digital challan and Proof of Delivery (POD) for transparent records.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚠️</div>
+                    <h3>Damage Reporting</h3>
+                    <p>Streamlined damage reporting and resolution.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💲</div>
+                    <h3>Extra Charge Management</h3>
+                    <p>Transparent management of extra charges.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">👜</div>
+                    <h3>Specialized Goods Handling</h3>
+                    <p>Specialized handling for all types of goods, including bag stock.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">↔️</div>
+                    <h3>Stock Transfer & Crossing</h3>
+                    <p>Efficient stock transfer and crossing services.</p>
+                </div>
+            </div>
         </section>
 
         <section id="booking" class="booking-section">
@@ -173,6 +245,25 @@
                             <option value="howrah">Howrah</option>
                             <option value="durgapur">Durgapur</option>
                         </optgroup>
+						<optgroup label="Andaman and Nicobar Islands">
+							<option value="port_blair">Port Blair</option>
+						</optgroup>
+						<optgroup label="Dadra and Nagar Haveli and Daman and Diu">
+							<option value="daman">Daman</option>
+							<option value="diu">Diu</option>
+							<option value="silvassa">Silvassa</option>
+						</optgroup>
+						<optgroup label="Lakshadweep">
+							<option value="kavaratti">Kavaratti</option>
+						</optgroup>
+						<optgroup label="Puducherry">
+							<option value="puducherry">Puducherry</option>
+							<option value="karaikal">Karaikal</option>
+						</optgroup>
+						<optgroup label="Ladakh">
+							<option value="leh">Leh</option>
+							<option value="kargil">Kargil</option>
+						</optgroup>
                     </select>
                 </div>
                 <div class="form-group">
@@ -338,6 +429,25 @@
                             <option value="howrah">Howrah</option>
                             <option value="durgapur">Durgapur</option>
                         </optgroup>
+						<optgroup label="Andaman and Nicobar Islands">
+							<option value="port_blair">Port Blair</option>
+						</optgroup>
+						<optgroup label="Dadra and Nagar Haveli and Daman and Diu">
+							<option value="daman">Daman</option>
+							<option value="diu">Diu</option>
+							<option value="silvassa">Silvassa</option>
+						</optgroup>
+						<optgroup label="Lakshadweep">
+							<option value="kavaratti">Kavaratti</option>
+						</optgroup>
+						<optgroup label="Puducherry">
+							<option value="puducherry">Puducherry</option>
+							<option value="karaikal">Karaikal</option>
+						</optgroup>
+						<optgroup label="Ladakh">
+							<option value="leh">Leh</option>
+							<option value="kargil">Kargil</option>
+						</optgroup>
                     </select>
                 </div>
                 <div class="form-group">
@@ -484,6 +594,25 @@
                             <option value="howrah">Howrah</option>
                             <option value="durgapur">Durgapur</option>
                         </optgroup>
+						<optgroup label="Andaman and Nicobar Islands">
+							<option value="port_blair">Port Blair</option>
+						</optgroup>
+						<optgroup label="Dadra and Nagar Haveli and Daman and Diu">
+							<option value="daman">Daman</option>
+							<option value="diu">Diu</option>
+							<option value="silvassa">Silvassa</option>
+						</optgroup>
+						<optgroup label="Lakshadweep">
+							<option value="kavaratti">Kavaratti</option>
+						</optgroup>
+						<optgroup label="Puducherry">
+							<option value="puducherry">Puducherry</option>
+							<option value="karaikal">Karaikal</option>
+						</optgroup>
+						<optgroup label="Ladakh">
+							<option value="leh">Leh</option>
+							<option value="kargil">Kargil</option>
+						</optgroup>
                     </select>
                 </div>
                 <div class="form-group">
@@ -505,13 +634,65 @@
         </section>
 
     </main>
+    
+    <section id="advertisement-slider" class="ad-slider">
+        <h2>Our Trusted Partners</h2>
+        <div class="slider-container">
+            <div class="slide"><img src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Partner+1" alt="Partner 1"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/00FF00/FFFFFF?text=Partner+2" alt="Partner 2"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/0000FF/FFFFFF?text=Partner+3" alt="Partner 3"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/FFFF00/FFFFFF?text=Partner+4" alt="Partner 4"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/FF00FF/FFFFFF?text=Partner+5" alt="Partner 5"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/00FFFF/FFFFFF?text=Partner+6" alt="Partner 6"></div>
+            <div class="slide"><img src="https://via.placeholder.com/150/C0C0C0/FFFFFF?text=Partner+7" alt="Partner 7"></div>
+        </div>
+    </section>
 
     <a href="https://wa.me/7900082808" class="whatsapp-button" target="_blank">
         Chat on WhatsApp
     </a>
 
-    <footer>
-        <p>&copy; 2024 Saipooja Warehouse. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Saipooja Warehouse offers secure and reliable storage solutions. Our mission is to provide top-notch service and peace of mind.</p>
+                <p><strong>Founder:</strong> Sandeep Mayekar</p>
+                <p><strong>CEO:</strong> Saurabh Mishra</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="policies.html">All Policies</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Warehouse St, Mumbai, India</li>
+                    <li><i class="fas fa-phone"></i> +91 79000 82808</li>
+                    <li><i class="fas fa-envelope"></i> info@saipoojawarehouse.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Rating</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>4.5 out of 5</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Saipooja Warehouse. All rights reserved.</p>
+            <p class="developer-credit">Developed by <a href="#" target="_blank">Saurabh Mishra</a></p>
+        </div>
     </footer>
 
     <!-- Login Modal -->
@@ -533,6 +714,31 @@
         </div>
     </div>
     
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    </script>
+
+    <script src="script.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

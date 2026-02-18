@@ -6,6 +6,7 @@
   packages = [
     pkgs.nodejs_22
     pkgs.python3
+    pkgs.zip
   ];
 
   # Recommended VS Code extensions

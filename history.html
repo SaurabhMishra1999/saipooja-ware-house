@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History - Saipooja Warehouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Saipooja Warehouse</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding: 2rem;">
+        <h1>Your Booking History</h1>
+
+        <section id="warehouse-history" style="margin-top: 2rem;">
+            <h2>Warehouse Bookings</h2>
+            <table id="warehouse-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="padding: 1rem; border: 1px solid #ddd;">City</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Product</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Space (Sq. Ft.)</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="logistics-history" style="margin-top: 2rem;">
+            <h2>Logistics Bookings</h2>
+            <table id="logistics-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Pickup</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Dropoff</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Vehicle</th>
+                        <th style="padding: 1rem; border: 1px solid #ddd;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="history.js"></script>
+</body>
+</html>

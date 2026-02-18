@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Dashboard - Saipooja Warehouse</title>
+    <title>Company Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header>
-        <div class="logo">Saipooja Warehouse</div>
+        <div class="logo">Warehouse Dashboard</div>
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">My Bookings</a></li>
-                <li><a href="#">Stock</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </nav>
@@ -22,28 +22,54 @@
 
     <main>
         <section class="welcome-section">
-            <h1>Welcome, <span id="client-name">Client</span>!</h1>
+            <h1>Welcome to your Dashboard, <span id="company-name"></span>!</h1>
             <p>Here is an overview of your warehouse activities.</p>
         </section>
 
-        <section class="dashboard-content">
-            <h2>My Recent Bookings</h2>
-            <table id="client-bookings-table">
-                <thead>
-                    <tr>
-                        <th>Booking ID</th>
-                        <th>City</th>
-                        <th>Product</th>
-                        <th>Space (Sq. Ft.)</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Client's bookings will be inserted here -->
-                </tbody>
-            </table>
+        <section id="add-branch-section" class="booking-section">
+            <h2>Add New Branch</h2>
+            <form id="add-branch-form" class="booking-form">
+                <div class="form-group">
+                    <label for="branch-name-input">Branch Name</label>
+                    <input type="text" id="branch-name-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="branch-location-input">Location</label>
+                    <input type="text" id="branch-location-input" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Branch</button>
+            </form>
+        </section>
+
+        <section id="branches-section">
+            <h2>Branches and Inventory</h2>
+            <div id="branches-container">
+                <!-- Branch and inventory data will be inserted here by JavaScript -->
+            </div>
         </section>
     </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    </script>
 
     <script src="dashboard.js"></script>
 </body>
