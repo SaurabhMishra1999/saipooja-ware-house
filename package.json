@@ -2,14 +2,14 @@
   "name": "saipooja-warehouse",
   "version": "1.0.0",
   "description": "A web application for Saipooja Warehouse services.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "http-server ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   },
   "dependencies": {
-    "bcrypt": "^6.0.0",
-    "express": "^4.19.2",
-    "express-session": "^1.19.0"
+    "firebase": "^12.9.0"
   }
 }

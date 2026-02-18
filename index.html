@@ -552,7 +552,7 @@
                             <option value="rourkela">Rourkela</option>
                         </optgroup>
                         <optgroup label="Punjab">
-                            <option value="ludhiana">Ludhiana</option>
+                            <option value="ludiana">Ludhiana</option>
                             <option value="amritsar">Amritsar</option>
                             <option value="jalandhar">Jalandhar</option>
                         </optgroup>
@@ -717,26 +717,13 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics-compat.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
-      };
-
-      // Initialize Firebase
-      const app = firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-    </script>
+    <!-- Firebase Config -->
+    <script src="firebase-config.js"></script>
 
     <script src="script.js"></script>
     <script src="index.js"></script>

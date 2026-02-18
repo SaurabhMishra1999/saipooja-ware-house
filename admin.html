@@ -5,126 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Saipooja Warehouse</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="admin.css">
-    <style>
-    .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
-    .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; }
-    .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
-    .close-button:hover, .close-button:focus { color: black; text-decoration: none; cursor: pointer; }
-    </style>
 </head>
 <body>
     <header>
-        <div class="logo">Admin Dashboard</div>
-        <nav><ul><li><a href="/logout">Logout</a></li></ul></nav>
+        <div class="logo">Saipooja Warehouse</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Manage Clients</a></li>
+                <li><a href="#">View All Inventory</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container" style="padding: 2rem;">
+    <main>
         <h1>Admin Dashboard</h1>
-
-        <section id="warehouse-bookings-section" style="margin-top: 2rem;">
-            <h2>Warehouse Bookings</h2>
-            <table id="warehouse-bookings-table" style="width: 100%; border-collapse: collapse;">                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Booking ID</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Client ID</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">City</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Status</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-
-        <section id="logistics-bookings-section" style="margin-top: 2rem;">
-            <h2>Logistics Bookings</h2>
-            <table id="logistics-bookings-table" style="width: 100%; border-collapse: collapse;">
-                <thead>
-                    <tr style="background-color: #f2f2f2;">
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Booking ID</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Client ID</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Pickup</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Dropoff</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Status</th>
-                        <th style="padding: 1rem; border: 1px solid #ddd;">Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-
-        <section id="invoice-creation-section" class="booking-section" style="margin-top: 2rem;">
-            <h2>Create Invoice</h2>
-            <form id="invoice-form" class="booking-form">
-                <div class="form-group"><label for="booking-id-input">Booking ID</label><input type="text" id="booking-id-input" required></div>
-                <div class="form-group"><label for="billing-name-input">Billing Name</label><input type="text" id="billing-name-input" required></div>
-                <div class="form-group"><label for="billing-address-input">Street Address</label><input type="text" id="billing-address-input" required></div>
-                <div class="form-group"><label for="billing-city-input">City</label><input type="text" id="billing-city-input" required></div>
-                <div class="form-group"><label for="billing-state-input">State</label><input type="text" id="billing-state-input" required></div>
-                <div class="form-group"><label for="billing-pincode-input">PIN Code</label><input type="text" id="billing-pincode-input" required></div>
-                <div class="form-group"><label for="amount-input">Amount (₹)</label><input type="number" id="amount-input" required></div>
-                <div class="form-group"><label for="due-date-input">Due Date</label><input type="date" id="due-date-input" required></div>
-                <button type="submit" class="btn-submit">Create and Download Invoice</button>
-            </form>
-        </section>
-
-        <section id="inventory-management-section" style="margin-top: 2rem;">
-            <h2>Inventory Management</h2>
-            <form id="inventory-form" class="booking-form">
-                <h3>Add New Inventory Item</h3>
-                <div class="form-group"><label for="branch-select">Branch</label><select id="branch-select" required></select></div>
-                <div class="form-group"><label for="product-name-input">Product Name</label><input type="text" id="product-name-input" required></div>
-                <div class="form-group"><label for="sku-input">SKU</label><input type="text" id="sku-input" required></div>
-                <div class="form-group"><label for="quantity-input">Quantity</label><input type="number" id="quantity-input" required></div>
-                <div class="form-group"><label for="location-input">Location</label><input type="text" id="location-input" required></div>
-                <button type="submit" class="btn-submit">Add Item</button>
-            </form>
-
-            <div id="inventory-display" style="margin-top: 2rem;">
-                <h3>Current Inventory</h3>
-                <table id="inventory-table" style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr style="background-color: #f2f2f2;">
-                            <th style="padding: 1rem; border: 1px solid #ddd;">Branch</th>
-                            <th style="padding: 1rem; border: 1px solid #ddd;">Product Name</th>
-                            <th style="padding: 1rem; border: 1px solid #ddd;">SKU</th>
-                            <th style="padding: 1rem; border: 1px solid #ddd;">Quantity</th>
-                            <th style="padding: 1rem; border: 1px solid #ddd;">Location</th>
-                            <th style="padding: 1rem; border: 1px solid #ddd;">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </section>
+        <p>Here you can manage clients and view all inventory.</p>
     </main>
-
-    <div id="edit-inventory-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Edit Inventory Item</h2>
-            <form id="edit-inventory-form">
-                <input type="hidden" id="edit-item-id">
-                <div class="form-group"><label for="edit-branch-select">Branch</label><select id="edit-branch-select" required></select></div>
-                <div class="form-group"><label for="edit-product-name-input">Product Name</label><input type="text" id="edit-product-name-input" required></div>
-                <div class="form-group"><label for="edit-sku-input">SKU</label><input type="text" id="edit-sku-input" required></div>
-                <div class="form-group"><label for="edit-quantity-input">Quantity</label><input type="number" id="edit-quantity-input" required></div>
-                <div class="form-group"><label for="edit-location-input">Location</label><input type="text" id="edit-location-input" required></div>
-                <button type="submit" class="btn-submit">Save Changes</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script>
-      const firebaseConfig = { apiKey: "YOUR_API_KEY", authDomain: "YOUR_AUTH_DOMAIN", projectId: "YOUR_PROJECT_ID", storageBucket: "YOUR_STORAGE_BUCKET", messagingSenderId: "YOUR_MESSAGING_SENDER_ID", appId: "YOUR_APP_ID" };
-      firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-    <script src="admin.js"></script>
 </body>
 </html>
