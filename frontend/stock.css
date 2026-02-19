@@ -1,0 +1,14 @@
+.container {
+    padding: 20px;
+}
+
+#stock-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#stock-list th, #stock-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}

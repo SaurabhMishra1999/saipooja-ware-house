@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "saipooja-warehouse-57350-94069"
+  },
+  "targets": {
+    "saipooja-warehouse-57350-94069": {
+      "hosting": {
+        "frontend": [
+          "saipooja-warehouse-57350-94069"
+        ],
+        "backend": [
+          "saipooja-warehouse-57350-94069-backend"
+        ]
+      }
+    }
+  }
+}

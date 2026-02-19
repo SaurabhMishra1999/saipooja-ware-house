@@ -1,0 +1,28 @@
+.container {
+    padding: 20px;
+}
+
+#add-item-form {
+    margin-bottom: 40px;
+}
+
+#inventory-form {
+    display: flex;
+    gap: 10px;
+}
+
+#inventory-form input {
+    flex: 1;
+    padding: 10px;
+}
+
+#inventory-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inventory-list th, #inventory-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}

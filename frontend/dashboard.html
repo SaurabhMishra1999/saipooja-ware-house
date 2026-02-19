@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Saipooja Warehouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Saipooja Warehouse</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" id="logout-button">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="dashboard-view">
+            <h2>My Dashboard</h2>
+            <p>Welcome, <span id="user-email"></span>!</p>
+
+            <div id="cold-storage-manager">
+                <h3>Cold Storage Units</h3>
+                <form id="add-unit-form">
+                    <input type="text" id="unit-name" placeholder="Unit Name" required>
+                    <input type="text" id="unit-temperature" placeholder="Temperature (°C)" required>
+                    <button type="submit" class="button">Add Unit</button>
+                </form>
+                
+                <div id="unit-list">
+                    <!-- Storage units will be listed here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Saipooja Warehouse. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <!-- Your Firebase config and dashboard script -->
+    <script src="firebase-config.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
